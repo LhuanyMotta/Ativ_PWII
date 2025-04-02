@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - Escola Visconde do Rio Branco</title>
+    <title>Escola Visconde do Rio Branco</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/form.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -18,109 +17,92 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Voltar para o Site</a></li>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#grades">Ensino Fundamental</a></li>
+                    <li><a href="#activities">Atividades</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="contato.html" class="btn-contact">Fale Conosco</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="form-container">
-        <section class="contact-form">
+    <main>
+        <section id="home" class="hero">
             <div class="container">
-                <h2>Formulário de Contato</h2>
-                <p>Preencha o formulário abaixo para entrar em contato conosco. Todos os campos são obrigatórios.</p>
-                
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo:</label>
-                        <input type="text" id="nome" name="nome" required>
-                        <span class="error-message" id="nome-error"></span>
+                <h2>Bem-vindo à Escola Visconde do Rio Branco</h2>
+                <p>Educação de qualidade do 1º ao 9º ano do Ensino Fundamental</p>
+                <a href="#about" class="btn">Conheça mais</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Sobre Nossa Escola</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>A Escola Visconde do Rio Branco tem uma tradição de mais de 50 anos na educação de crianças e adolescentes. Nossa missão é proporcionar um ambiente acolhedor e estimulante, onde cada aluno possa desenvolver seu potencial intelectual, emocional e social.</p>
+                        <p>Localizada em um campus arborizado, nossa escola oferece infraestrutura moderna e adequada para cada fase do desenvolvimento dos alunos.</p>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">E-mail:</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message" id="email-error"></span>
+                    <div class="about-image">
+                        <img src="images/escola.jpg" alt="Foto da Escola">
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="telefone">Telefone:</label>
-                        <input type="tel" id="telefone" name="telefone" required>
-                        <span class="error-message" id="telefone-error"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="grades" class="grades">
+            <div class="container">
+                <h2>Ensino Fundamental</h2>
+                <div class="grades-grid">
+                    <div class="grade-card">
+                        <h3>1º ao 5º Ano</h3>
+                        <p>Fase de alfabetização e construção de bases sólidas para o aprendizado.</p>
+                        <img src="images/fundamental1.jpg" alt="Alunos do 1º ao 5º ano">
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="data">Data de Nascimento do Aluno:</label>
-                        <input type="date" id="data" name="data" required>
-                        <span class="error-message" id="data-error"></span>
+                    <div class="grade-card">
+                        <h3>6º ao 9º Ano</h3>
+                        <p>Ampliação do conhecimento e preparação para o Ensino Médio.</p>
+                        <img src="images/fundamental2.jpg" alt="Alunos do 6º ao 9º ano">
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="serie">Série de Interesse:</label>
-                        <select id="serie" name="serie" required>
-                            <option value="">Selecione a série</option>
-                            <option value="1ano">1º Ano</option>
-                            <option value="2ano">2º Ano</option>
-                            <option value="3ano">3º Ano</option>
-                            <option value="4ano">4º Ano</option>
-                            <option value="5ano">5º Ano</option>
-                            <option value="6ano">6º Ano</option>
-                            <option value="7ano">7º Ano</option>
-                            <option value="8ano">8º Ano</option>
-                            <option value="9ano">9º Ano</option>
-                        </select>
-                        <span class="error-message" id="serie-error"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="activities" class="activities">
+            <div class="container">
+                <h2>Atividades Extracurriculares</h2>
+                <div class="activities-grid">
+                    <div class="activity">
+                        <i class="fas fa-futbol"></i>
+                        <h3>Esportes</h3>
+                        <p>Futsal, Vôlei, Basquete e Atletismo</p>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Tipo de Contato:</label>
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="tipo-contato" value="matricula" required> Matrícula
-                            </label>
-                            <label>
-                                <input type="radio" name="tipo-contato" value="duvida"> Dúvida
-                            </label>
-                            <label>
-                                <input type="radio" name="tipo-contato" value="reclamacao"> Reclamação
-                            </label>
-                            <label>
-                                <input type="radio" name="tipo-contato" value="elogio"> Elogio
-                            </label>
-                        </div>
-                        <span class="error-message" id="tipo-contato-error"></span>
+                    <div class="activity">
+                        <i class="fas fa-music"></i>
+                        <h3>Música</h3>
+                        <p>Coral, Banda e Instrumentos Musicais</p>
                     </div>
-                    
-                    <div class="form-group">
-                        <label>Áreas de Interesse:</label>
-                        <div class="checkbox-group">
-                            <label>
-                                <input type="checkbox" name="interesse" value="esportes"> Esportes
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interesse" value="artes"> Artes
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interesse" value="ciencias"> Ciências
-                            </label>
-                            <label>
-                                <input type="checkbox" name="interesse" value="musica"> Música
-                            </label>
-                        </div>
+                    <div class="activity">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Artes</h3>
+                        <p>Teatro, Pintura e Artesanato</p>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                        <span class="error-message" id="mensagem-error"></span>
+                    <div class="activity">
+                        <i class="fas fa-flask"></i>
+                        <h3>Ciências</h3>
+                        <p>Clube de Ciências e Robótica</p>
                     </div>
-                    
-                    <div class="form-group">
-                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-                    </div>
-                </form>
-                
-                <div id="formResult" class="form-result"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-preview">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <p>Tem dúvidas ou quer saber mais sobre nossa escola? Entre em contato conosco!</p>
+                <a href="contato.html" class="btn">Formulário de Contato</a>
             </div>
         </section>
     </main>
@@ -146,6 +128,6 @@
         </div>
     </footer>
 
-    <script src="js/form.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
