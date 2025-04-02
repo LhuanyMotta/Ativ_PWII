@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Escola Visconde do Rio Branco</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/visconde.jpg" alt="Logo Escola Visconde do Rio Branco">
+                <h1>Escola Visconde do Rio Branco</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Voltar para o Site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <section class="contact-form">
+            <div class="container">
+                <h2>Formulário de Contato</h2>
+                <p>Preencha o formulário abaixo para entrar em contato conosco. Todos os campos são obrigatórios.</p>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <span class="error-message" id="nome-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                        <span class="error-message" id="telefone-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="data">Data de Nascimento do Aluno:</label>
+                        <input type="date" id="data" name="data" required>
+                        <span class="error-message" id="data-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serie">Série de Interesse:</label>
+                        <select id="serie" name="serie" required>
+                            <option value="">Selecione a série</option>
+                            <option value="1ano">1º Ano</option>
+                            <option value="2ano">2º Ano</option>
+                            <option value="3ano">3º Ano</option>
+                            <option value="4ano">4º Ano</option>
+                            <option value="5ano">5º Ano</option>
+                            <option value="6ano">6º Ano</option>
+                            <option value="7ano">7º Ano</option>
+                            <option value="8ano">8º Ano</option>
+                            <option value="9ano">9º Ano</option>
+                        </select>
+                        <span class="error-message" id="serie-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Tipo de Contato:</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="tipo-contato" value="matricula" required> Matrícula
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-contato" value="duvida"> Dúvida
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-contato" value="reclamacao"> Reclamação
+                            </label>
+                            <label>
+                                <input type="radio" name="tipo-contato" value="elogio"> Elogio
+                            </label>
+                        </div>
+                        <span class="error-message" id="tipo-contato-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Áreas de Interesse:</label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="interesse" value="esportes"> Esportes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="artes"> Artes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="ciencias"> Ciências
+                            </label>
+                            <label>
+                                <input type="checkbox" name="interesse" value="musica"> Música
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        <span class="error-message" id="mensagem-error"></span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                    </div>
+                </form>
+                
+                <div id="formResult" class="form-result"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <h3>Escola Visconde do Rio Branco</h3>
+                <p>Rua da Educação, 123 - Centro</p>
+                <p>Telefone: (69) 1234-5678</p>
+                <p>Email: contato@viscondedoriobranco.edu.br</p>
+            </div>
+            <div class="footer-social">
+                <h3>Siga-nos</h3>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Escola Visconde do Rio Branco. Todos os direitos reservados.</p>
+            <p class="developer-credit">Desenvolvido por <a href="https://github.com/LhuanyMotta" target="_blank">Lhuany Motta</a></p>
+        </div>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>
